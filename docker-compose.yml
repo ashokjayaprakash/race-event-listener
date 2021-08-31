@@ -1,0 +1,22 @@
+version: '3'
+services:
+  node:
+    restart: always
+    build: .
+    ports:
+      - 80:3000
+    volumes:
+      - ./:/code
+    environment:
+      - API_HOST=http://35.207.169.147
+      - AUTH_USERNAME=ashokjp93@gmail.com
+      - AUTH_PASSWORD=lTgAYaLP9jRs
+      - DB_CONNECTION_STRING=mongodb://mongo:27017/docker-node-mongo
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+volumes:
+ mongodb:

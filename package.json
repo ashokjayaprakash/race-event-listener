@@ -1,0 +1,23 @@
+{
+  "name": "race-event-listener",
+  "description": "The worker/listener service to listen the simple trot race simulator events and store it to Mongodb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --expose-gc node_modules/jest/bin/jest.js",
+    "prettier": "prettier --write src/** test/**"
+  },
+  "author": {
+    "name": "Ashok JayaPrakash",
+    "email": "ashokjp93@gmail.com"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "mongoose": "^6.0.3",
+    "pino": "^6.13.1"
+  },
+  "devDependencies": {
+    "jest": "^27.1.0"
+  }
+}
